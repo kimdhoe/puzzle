@@ -1,4 +1,4 @@
-// Merges already sorted subarrays A[p..q] and A[q+1..r].
+// Merges sorted subarrays A[p..q] and A[q+1..r].
 const merge = (A, p, q, r) => {
   const n1 = q - p + 1
   const n2 = r - q
