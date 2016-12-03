@@ -49,6 +49,12 @@ const sort = (arr, p, r) => {
   if (p >= r)
     return arr
 
+  // Choose pivot randomly:
+  const i = Math.floor(Math.random() * (r - p + 1) + p)
+  const temp = arr[r]
+  arr[r] = arr[i]
+  arr[i] = temp
+
   const q = partition(arr, p, r)
 
   sort(arr, p, q - 1)
